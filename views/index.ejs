@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <style>
+    
+    body  {
+ 
+ background-color: #cccccc;
+}
+
+.main-div{
+margin-left: 430px
+    }
+div.ex3 {
+    background-color: lightblue;
+    width: 450px;
+    height: 530px;
+    overflow: auto;
+   
+  }
+  .vertical-align {
+    float: left;
+    margin-top: auto;
+}
+  
+
+button#send_message {
+    width: 106px;
+}
+input#message {
+    width: 340px;
+}
+
+
+  
+input[type=text], select {
+  width: 317px;
+  padding: 12px 20px;
+  margin: 4px 0 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.redbutton {
+  background-color: rgb(192, 30, 18); /* Green */
+  border: none;
+  color: white;
+  padding: 12px 31px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.greenbutton {
+ background-color: rgb(36, 109, 36);
+  border: none;
+  color: white;
+  padding: 10px 31px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.header{
+    margin-left: 123px;
+    font-kerning: normal;
+    color: #2f12d8;
+}
+.userNameChatRoom{
+  text-transform: capitalize;
+  font-size: 20px;
+  margin-left: 5px;
+  font-weight: 500;
+  color: #3930db;
+}
+
+div#welcome-user {
+    display: none;
+    /* border: 2px; */
+    border: 3px solid lightblue;
+    width: 444px;
+    text-align: center;
+    font-size: 18px;
+    background: #eaf5fe;
+
+}
+
+  span.time-span {
+     /* FONT-WEIGHT: 200; */
+    /* margin: auto; */
+    margin-top: -16px;
+    /* margin-left: 387px; */
+    float: right;
+    margin-right: 6px;
+    }
+  </style>
+    <title>Chatz'App</title>
+  </head>
+
+  <body>
+    <div class="main-div">
+    <header class="header">
+      <h1>ChatzApp</h1>
+      <h3>Let's chat here !!!</h3>
+    </header>
+ 
+    <section>
+      <span>
+    <div id="change_username">
+	<input id="username" type="text"  placeholder="Enter your name "/>
+	<button id="send_username" class="redbutton"type="button">Let's join</button>
+      </div>
+      <div id="welcome-user" >
+      <p>welcome</p>
+      </div>
+    </span>
+    <span>
+      <div id="change_username">
+      
+      </div>
+    </span>
+    </section>
+    <div class="ex3">
+    <section id="chatroom">
+       
+      <section id="feedback"></section>
+    </section>
+
+    
+  </div>
+    <section id="input_zone"> 
+      <input id="message" class="vertical-align" type="text" />
+      <button id="send_message"  class="greenbutton" type="button">Send</button>
+    </section>
+  </div>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="chat.js"></script>
+  </body>
+</html>
